@@ -11,35 +11,61 @@
     <form>
         <div class="form-group">
           <label for="formGroupExampleInput">Nombre</label>
-          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Nombre">
+          <input type="text" class="form-control" id="nombre" placeholder="Nombre" onchange="mayus()">
         </div>
+
         <div class="form-group">
           <label for="formGroupExampleInput2">Apellido</label>
-          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Apellido">
+          <input type="text" class="form-control" id="apellido" placeholder="Apellido" onchange="enviar()">
         </div>
 
       </form>
       <label> ¿Desea registrarse en el concurso?</label>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="option1" value="si" checked>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="option1" value="si" onchange="registro()">
         <label class="form-check-label" for="exampleRadios1">
           Sí
         </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="exampleRadios" id="option2" value="no">
+        <br>
+        <input class="form-check-input" type="radio" name="exampleRadios" id="option2" value="no" onchange="registro()">
         <label class="form-check-label" for="exampleRadios2">
           No
         </label>
-        
       </div>
-
+  
+      <div id="ch" >
+      </div>
 
       <div class="form-row">
         <div class="form-group col-md-6">
           <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          <input type="email" class="form-control" id="inputEmail4" placeholder="Email" pattern="@" required>
         </div>
+        </div>
+             
+     <div >
+      <div>
+          <label>Fecha de nacimiento</label>
+          <br>
+          <input type="date" class="form-control" id="date">
+        </div>
+     </div>
+   
+     
+     <div class="form-floating">
+      <label for="floatingPassword">Contraseña</label>
+      <input type="password" class="form-control" id="floatingPassword" placeholder="*******">
+      
+    </div>
+
+    <div class="form-floating">
+      <label for="floatingPassword">Confirmar contraseña</label>
+      <input type="password" class="form-control" id="floatingPassword" placeholder="*******">
+      
+    </div>
+    
+    <input class="btn btn-primary" type="submit" value="Submit" id="boton" style="display: none;" >
+        
 
 
 </body>
